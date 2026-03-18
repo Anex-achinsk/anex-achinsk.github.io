@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ANEX Ачинск — подбор туров</title>
+
+<style>
+body {margin:0;font-family:Arial;background:#f4f6f8;}
+.header {
+ background:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover;
+ height:90vh;color:white;
+}
+.overlay {background:rgba(0,0,0,0.6);height:100%;padding:20px;}
+
+.search-box {
+ background:white;padding:20px;border-radius:12px;
+ max-width:900px;margin:100px auto;
+ display:flex;flex-wrap:wrap;gap:10px;
+}
+
+.search-box input,.search-box select {
+ padding:12px;border-radius:8px;border:1px solid #ccc;flex:1;
+}
+
+.search-box button {
+ background:#e30613;color:white;border:none;
+ padding:15px;border-radius:8px;
+}
+
+.section {padding:50px 20px;text-align:center;}
+.cards {display:flex;flex-wrap:wrap;gap:20px;justify-content:center;}
+
+.card {
+ background:white;width:280px;border-radius:12px;
+ overflow:hidden;box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+.card img {width:100%;height:180px;object-fit:cover;}
+.card-body {padding:15px;}
+
+.form {max-width:400px;margin:auto;background:white;padding:25px;border-radius:12px;}
+input,textarea {
+ width:100%;padding:12px;margin:10px 0;
+ border-radius:8px;border:1px solid #ccc;
+}
+
+button {
+ width:100%;padding:15px;
+ background:#e30613;color:white;border:none;border-radius:8px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+<div class="overlay">
+<h1>ANEX Ачинск</h1>
+<p>Подберем тур дешевле, чем в интернете</p>
+
+<div class="search-box">
+<input placeholder="Откуда (Красноярск)">
+<input placeholder="Куда (Турция, Египет)">
+<input type="date">
+<select>
+<option>7 ночей</option>
+<option>10 ночей</option>
+</select>
+<button onclick="document.getElementById('form').scrollIntoView()">Найти тур</button>
+</div>
+</div>
+</div>
+
+<div class="section">
+<h2>Популярные направления</h2>
+<div class="cards">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff">
+<div class="card-body"><h3>Турция</h3></div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+<div class="card-body"><h3>Египет</h3></div>
+</div>
+</div>
+</div>
+
+<div class="section" id="form">
+<h2>Оставьте заявку</h2>
+<div class="form">
+<input placeholder="Ваше имя">
+<input placeholder="Телефон">
+<textarea placeholder="Куда хотите"></textarea>
+<button>Отправить</button>
+</div>
+</div>
+
+</body>
+</html>
